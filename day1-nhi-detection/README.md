@@ -130,18 +130,26 @@ NHI monitoring is no longer optional. It is a core SOC capability.
 day1-nhi-detection/
 
 ├── generate_nhi_logs.py       # Python log generation script
+
 ├── nhi_anomaly_patterns.md    # 5 anomaly patterns reference doc
+
 └── README.md                  # This incident report
+
 logs/
 └── nhi_logs.json              # Generated synthetic log data
 
 screenshots/
 
 ├── day1_script_created.png
+
 ├── day1_script_written.png
+
 ├── day1_logs_generated.png
+
 ├── day1_splunk_ingestion.png
+
 ├── day1_detection_query.png
+
 └── day1_anomaly_patterns.pnge
 
 
