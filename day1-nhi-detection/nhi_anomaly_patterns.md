@@ -1,4 +1,4 @@
-# NHI Anomaly Patterns — SOC Detection Reference
+# NHI Anomaly Patterns SOC Detection Reference
 
 ## What is a Non-Human Identity (NHI)?
 Service accounts, API keys, and AI agent identities that operate
