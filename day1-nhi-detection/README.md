@@ -126,7 +126,6 @@ NHI monitoring is no longer optional. It is a core SOC capability.
 
 ## Repository Structur
 
-'''
 
 day1-nhi-detection/
 
@@ -145,7 +144,6 @@ screenshots/
 ├── day1_detection_query.png
 └── day1_anomaly_patterns.pnge
 
-''''
 
 ## Conclusion
 Day 1 demonstrated that NHI anomaly detection is achievable with
