@@ -1,8 +1,5 @@
 # SOC Detection Lab AI-Era Threat Simulation
 
-**Author:** James Williams | [@WilliamInCyber](https://x.com/WilliamInCyber)
-**GitHub:** [WiLL75G](https://github.com/WiLL75G)
-
 
 ---
 
