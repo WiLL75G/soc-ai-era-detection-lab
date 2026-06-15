@@ -34,7 +34,6 @@ input length thresholds, and agent behaviour monitoring.
 ### Step 1 Created the Log Generation Script
 Python script file created inside day2-prompt-injection folder.
 
-![Script Created](../screenshots/day2_script_created.png)
 
 ### Step 2 Wrote the Log Generation Script
 70 normal AI assistant interactions and 15 prompt injection attacks
