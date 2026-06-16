@@ -1,4 +1,4 @@
-# Day 3 MCP Server Threat Model
+# MCP Server Threat Model
 
 ## Incident Summary
 This day was a proactive threat modelling exercise rather than an incident
