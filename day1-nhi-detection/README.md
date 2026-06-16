@@ -1,4 +1,4 @@
-# Day 1 Non-Human Identity (NHI) Anomaly Detection
+# Non-Human Identity (NHI) Anomaly Detection
 
 ## Incident Summary
 A compromised AI service account (svc_ai_agent_01) was used to exfiltrate
