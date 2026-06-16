@@ -1,4 +1,4 @@
-# Day 2 Prompt Injection Detection in Application Logs
+# Prompt Injection Detection in Application Logs
 
 ## Incident Summary
 An attacker exploited an enterprise AI assistant by injecting malicious
