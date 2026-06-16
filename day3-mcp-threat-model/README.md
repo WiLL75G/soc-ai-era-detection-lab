@@ -1,5 +1,4 @@
-```
-# Day 3 — MCP Server Threat Model
+# Day 3 MCP Server Threat Model
 
 ## Incident Summary
 This day was a proactive threat modelling exercise rather than an incident
@@ -12,7 +11,7 @@ surfaces before any compromise occurs.
 The Model Context Protocol is the open standard introduced by Anthropic
 for connecting AI agents to external tools, data sources, and services.
 As MCP adoption grows across enterprise environments, the agents using
-it inherit broad access across multiple systems — creating attack
+it inherit broad access across multiple systems creating attack
 surfaces that traditional security reviews were never designed to catch.
 Threat modelling an MCP-connected agent before deployment is a rare and
 valuable skill, since most security teams have not yet built this
@@ -24,26 +23,26 @@ using STRIDE, produce a visual data flow diagram showing the attack path,
 and translate identified threats into testable detection hypotheses.
 
 ## Tools Used
-- STRIDE methodology — threat categorisation framework
-- draw.io (diagrams.net) — data flow diagram
-- OWASP Top 10 for LLM Applications 2025 — reference framework
+- STRIDE methodology threat categorisation framework
+- draw.io (diagrams.net) data flow diagram
+- OWASP Top 10 for LLM Applications 2025 reference framework
 
 ## Environment
 - Scenario: AI coding assistant with read/write access to GitHub, Jira,
   Slack, and read access to a secrets manager
 - Trust boundary: agent processes untrusted external content (tickets,
   issues, messages) as part of normal operation
-- No code or log generation required — pure analytical threat modelling
+- No code or log generation required pure analytical threat modelling
 
 ## Investigation Methodology
 
-### Step 1 — Defined the Scenario
+### Step 1 Defined the Scenario
 Documented the system under assessment: connected MCP servers, agent
 capabilities, user base, and trust boundaries.
 
 ![Scenario Defined](../screenshots/day3_scenario.png)
 
-### Step 2 — Built the STRIDE Threat Model
+### Step 2 Built the STRIDE Threat Model
 Applied all six STRIDE categories to the MCP scenario. Identified that
 Information Disclosure and Elevation of Privilege carry the highest risk
 due to standing credentials across all four connected systems with no
@@ -51,18 +50,18 @@ per-task scope limitation.
 
 ![STRIDE Model](../screenshots/day3_stride_model.png)
 
-### Step 3 — Built the Threat Diagram
+### Step 3 Built the Threat Diagram
 Produced a visual data flow diagram showing both normal agent operation
-and the attack path — an attacker embedding malicious instructions in a
+and the attack path an attacker embedding malicious instructions in a
 Jira ticket or GitHub issue, which the agent then reads and executes as
 indirect prompt injection.
 
 ![Threat Diagram](../screenshots/day3_threat_diagram.png)
 
-### Step 4 — Wrote Detection Hypotheses
+### Step 4 Wrote Detection Hypotheses
 Translated the highest-risk threats into three testable detection
 hypotheses using telemetry that already exists in a standard MCP
-deployment — no new instrumentation required.
+deployment no new instrumentation required.
 
 ![Detection Hypotheses](../screenshots/day3_hypotheses.png)
 
@@ -89,7 +88,7 @@ deployment — no new instrumentation required.
 - Root cause across both high-risk categories: standing access with no
   per-task scope limitation
 - Attack surface includes any system the agent reads from, not just direct
-  chat input — tickets, issues, and messages are all viable injection vectors
+  chat input tickets, issues, and messages are all viable injection vectors
 - 3 detection hypotheses produced, all testable using existing telemetry
 
 ## SOC Analyst Response
@@ -107,11 +106,11 @@ deployment — no new instrumentation required.
 ## Analyst Insight
 Threat modelling an AI agent is fundamentally different from threat
 modelling a traditional application. The agent does not have fixed
-inputs — it reads tickets, issues, and messages as part of normal
+inputs it reads tickets, issues, and messages as part of normal
 operation, meaning the attack surface extends to every system it touches,
 not just the chat interface developers interact with directly. The most
 dangerous finding in this exercise was not a single exotic attack, but a
-structural one — standing access across four systems with no per-task
+structural one standing access across four systems with no per-task
 scope. That single design decision is what makes Information Disclosure
 and Elevation of Privilege both reachable through the same root cause.
 This is the kind of systemic risk that only becomes visible through
