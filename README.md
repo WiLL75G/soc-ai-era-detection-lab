@@ -1,19 +1,18 @@
 # SOC Detection Lab AI-Era Threat Simulation
 
-
 ---
 
 ## Project Overview
 
 A 4-day hands-on SOC detection lab simulating AI-era threats that are
 actively emerging in enterprise environments in 2026. Built from scratch
-using Splunk, Python, and the OWASP Top 10 for LLM Applications as the
-reference framework.
+using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for
+LLM Applications as the reference framework.
 
 This project demonstrates the full SOC analyst workflow threat simulation,
-log ingestion, SIEM detection rule writing, MITRE ATT&CK mapping, and
-professional incident report documentation applied to a threat class
-most entry-level analysts have never touched.
+log ingestion, SIEM detection rule writing, threat modelling, MITRE ATT&CK
+mapping, and professional incident report documentation applied to a
+threat class most entry-level analysts have never touched.
 
 ---
 
@@ -49,6 +48,7 @@ This lab is built to change that starting with detection.
 - SIEM ingestion and SPL detection rule writing in Splunk Enterprise
 - Behavioural baselining identifying anomalies against known-good state
 - Threat modelling using STRIDE methodology applied to AI agent systems
+- Translating identified threats into testable detection hypotheses
 - MITRE ATT&CK mapping for AI-era attack techniques
 - SOC Tier 1 incident documentation from detection through analyst response
 - OWASP LLM Top 10 applied as a practical detection framework
@@ -61,6 +61,12 @@ This lab is built to change that starting with detection.
 |-----|-------------|-----------|---------|-----------------|
 | Day 1 | 100 | 20 | 38 | 0 |
 | Day 2 | 85 | 15 | 15 | 0 |
+
+## Threat Modelling Coverage
+
+| Day | Framework | Categories Assessed | Detection Hypotheses Produced |
+|-----|-----------|---------------------|-------------------------------|
+| Day 3 | STRIDE | 6 of 6 | 3 |
 
 ---
 
@@ -79,7 +85,8 @@ soc-ai-era-detection-lab/
 ├── day3-mcp-threat-model/
 │   ├── scenario.md                # Enterprise MCP scenario definition
 │   ├── stride_threat_model.md     # STRIDE threat model table
-│   └── detection_hypotheses.md   # SOC detection hypotheses
+│   ├── detection_hypotheses.md    # 3 SOC detection hypotheses
+│   └── README.md                  # Day 3 threat model report
 ├── day4-incident-report/
 │   └── INCIDENT_REPORT.md         # Full SOC incident report
 ├── logs/
@@ -94,12 +101,14 @@ soc-ai-era-detection-lab/
 
 | Technique | ID | Day |
 |-----------|-----|-----|
-| Valid Accounts | T1078 | Day 1, Day 2 |
+| Valid Accounts | T1078 | Day 1, Day 2, Day 3 |
 | Data from Information Repositories | T1213 | Day 1 |
-| Exfiltration Over Web Service | T1567 | Day 1, Day 2 |
+| Exfiltration Over Web Service | T1567 | Day 1, Day 2, Day 3 |
 | Hijack Execution Flow | T1574 | Day 2 |
-| Unsecured Credentials | T1552 | Day 2 |
+| Unsecured Credentials | T1552 | Day 2, Day 3 |
 | Data from Local System | T1005 | Day 2 |
+| Phishing | T1566 | Day 3 |
+| Resource Hijacking | T1496 | Day 3 |
 
 ---
 
@@ -125,6 +134,7 @@ Primary risks covered:
 | Splunk Enterprise | SIEM log ingestion and detection |
 | Python 3 | Synthetic log generation |
 | VS Code | Development environment |
+| STRIDE | Threat modelling methodology |
 | draw.io | Threat model diagrams |
 | OWASP LLM Top 10 | Detection reference framework |
 | GitHub | Documentation and portfolio evidence |
@@ -137,5 +147,3 @@ William Gokah is a SOC analyst building toward Tier 1 and
 Tier 2 remote roles at MSSPs across the UK, UAE, and Australia. This
 project is part of a broader portfolio of hands-on blue team labs built
 publicly under the @WilliamInCyber brand.
-
-
