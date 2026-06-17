@@ -134,7 +134,7 @@ This lab is built against the
 as the industry baseline for AI security risks.
 
 Primary risks covered:
-- LLM01 - Prompt Injection (Day 2, Day 4)
+- LLM01 — Prompt Injection (Day 2, Day 4)
 - LLM02 — Insecure Output Handling (Day 2)
 - LLM06 — Excessive Agency (Day 1, Day 3, Day 4)
 - LLM08 — Vector and Embedding Weaknesses (Day 3)
