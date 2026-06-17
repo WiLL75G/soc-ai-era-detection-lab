@@ -1,5 +1,7 @@
 # SOC Detection Lab AI-Era Threat Simulation
 
+**Status: Complete 4 of 4 days delivered**
+
 ---
 
 ## Project Overview
@@ -10,9 +12,10 @@ using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for
 LLM Applications as the reference framework.
 
 This project demonstrates the full SOC analyst workflow threat simulation,
-log ingestion, SIEM detection rule writing, threat modelling, MITRE ATT&CK
-mapping, and professional incident report documentation applied to a
-threat class most entry-level analysts have never touched.
+log ingestion, SIEM detection rule writing, threat modelling, multi-incident
+correlation, MITRE ATT&CK mapping, and professional incident report
+documentation applied to a threat class most entry-level analysts have
+never touched.
 
 ---
 
@@ -33,12 +36,12 @@ This lab is built to change that starting with detection.
 
 ## Lab Structure
 
-| Day | Focus | Threat Simulated | Tools |
-|-----|-------|-----------------|-------|
-| Day 1 | NHI Anomaly Detection | Compromised AI service account exfiltrating 1,877 records via admin API | Python, Splunk SPL |
-| Day 2 | Prompt Injection Detection | Attacker injecting override instructions into enterprise AI assistant | Python, Splunk SPL |
-| Day 3 | MCP Threat Modelling | AI coding agent connected to GitHub, Jira, Slack and secrets manager | STRIDE, draw.io |
-| Day 4 | Full SOC Incident Report | Combined AI-era attack NHI abuse + prompt injection + MCP exploitation | Markdown |
+| Day | Focus | Threat Simulated | Tools | Status |
+|-----|-------|-----------------|-------|--------|
+| Day 1 | NHI Anomaly Detection | Compromised AI service account exfiltrating 1,877 records via admin API | Python, Splunk SPL | Complete |
+| Day 2 | Prompt Injection Detection | Attacker injecting override instructions into enterprise AI assistant | Python, Splunk SPL | Complete |
+| Day 3 | MCP Threat Modelling | AI coding agent connected to GitHub, Jira, Slack and secrets manager | STRIDE, draw.io | Complete |
+| Day 4 | Full SOC Incident Report | Combined AI-era attack chain correlating NHI abuse, prompt injection, and MCP exploitation into one kill chain | Markdown | Complete |
 
 ---
 
@@ -50,7 +53,10 @@ This lab is built to change that starting with detection.
 - Threat modelling using STRIDE methodology applied to AI agent systems
 - Translating identified threats into testable detection hypotheses
 - MITRE ATT&CK mapping for AI-era attack techniques
-- SOC Tier 1 incident documentation from detection through analyst response
+- Correlating multiple independent detections into a single coherent
+  kill chain attributed to one threat actor
+- SOC Tier 1 and Tier 2 incident documentation from detection through
+  multi-phase investigation and analyst response
 - OWASP LLM Top 10 applied as a practical detection framework
 
 ---
@@ -67,6 +73,15 @@ This lab is built to change that starting with detection.
 | Day | Framework | Categories Assessed | Detection Hypotheses Produced |
 |-----|-----------|---------------------|-------------------------------|
 | Day 3 | STRIDE | 6 of 6 | 3 |
+
+## Incident Correlation Outcome
+
+| Day | Role in Kill Chain | Outcome |
+|-----|---------------------|---------|
+| Day 1 | Initial compromise successful exfiltration | 1,877 records confirmed exfiltrated |
+| Day 2 | Secondary attempt credential theft via injection | Detected and flagged before success |
+| Day 3 | Architectural root cause identification | Standing access with no per-task scope |
+| Day 4 | Full correlation across all three phases | Single threat actor confirmed via shared IOC |
 
 ---
 
@@ -88,7 +103,7 @@ soc-ai-era-detection-lab/
 │   ├── detection_hypotheses.md    # 3 SOC detection hypotheses
 │   └── README.md                  # Day 3 threat model report
 ├── day4-incident-report/
-│   └── INCIDENT_REPORT.md         # Full SOC incident report
+│   └── INCIDENT_REPORT.md         # Full multi-phase incident report
 ├── logs/
 │   ├── nhi_logs.json              # Day 1 synthetic log data
 │   └── pi_logs.json               # Day 2 synthetic log data
@@ -101,13 +116,13 @@ soc-ai-era-detection-lab/
 
 | Technique | ID | Day |
 |-----------|-----|-----|
-| Valid Accounts | T1078 | Day 1, Day 2, Day 3 |
+| Valid Accounts | T1078 | Day 1, Day 2, Day 3, Day 4 |
 | Data from Information Repositories | T1213 | Day 1 |
-| Exfiltration Over Web Service | T1567 | Day 1, Day 2, Day 3 |
-| Hijack Execution Flow | T1574 | Day 2 |
-| Unsecured Credentials | T1552 | Day 2, Day 3 |
+| Exfiltration Over Web Service | T1567 | Day 1, Day 2, Day 3, Day 4 |
+| Hijack Execution Flow | T1574 | Day 2, Day 4 |
+| Unsecured Credentials | T1552 | Day 2, Day 3, Day 4 |
 | Data from Local System | T1005 | Day 2 |
-| Phishing | T1566 | Day 3 |
+| Phishing | T1566 | Day 3, Day 4 |
 | Resource Hijacking | T1496 | Day 3 |
 
 ---
@@ -119,9 +134,9 @@ This lab is built against the
 as the industry baseline for AI security risks.
 
 Primary risks covered:
-- LLM01 — Prompt Injection (Day 2)
+- LLM01 - Prompt Injection (Day 2, Day 4)
 - LLM02 — Insecure Output Handling (Day 2)
-- LLM06 — Excessive Agency (Day 1, Day 3)
+- LLM06 — Excessive Agency (Day 1, Day 3, Day 4)
 - LLM08 — Vector and Embedding Weaknesses (Day 3)
 - LLM09 — Misinformation (Day 3)
 
