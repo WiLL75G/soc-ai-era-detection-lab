@@ -1,21 +1,30 @@
-# SOC Detection Lab AI-Era Threat Simulation
+```
+ █████╗ ██╗      ███████╗██████╗  █████╗ 
+██╔══██╗██║      ██╔════╝██╔══██╗██╔══██╗
+███████║██║█████╗█████╗  ██████╔╝███████║
+██╔══██║██║╚════╝██╔══╝  ██╔══██╗██╔══██║
+██║  ██║██║      ███████╗██║  ██║██║  ██║
+╚═╝  ╚═╝╚═╝      ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+```
 
-**Status: Complete 4 of 4 days delivered**
+[![Blue Team Notes](https://img.shields.io/badge/Blue_Team_Notes-WilliamInCyber-1F6FEB?style=flat&logo=github&logoColor=white)](https://github.com/WiLL75G)
+[![Splunk](https://img.shields.io/badge/SIEM-Splunk-65A637?style=flat&logo=splunk&logoColor=white)](https://www.splunk.com)
+[![OWASP LLM Top 10](https://img.shields.io/badge/OWASP-LLM_Top_10-000000?style=flat&logo=owasp&logoColor=white)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+[![STRIDE](https://img.shields.io/badge/Threat_Model-STRIDE-E57000?style=flat)](https://en.wikipedia.org/wiki/STRIDE_model)
+[![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-C5221F?style=flat)](https://attack.mitre.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+# SOC Detection Lab: AI-Era Threat Simulation
+
+**Status: Complete, 4 of 4 days delivered**
 
 ---
 
 ## Project Overview
 
-A 4-day hands-on SOC detection lab simulating AI-era threats that are
-actively emerging in enterprise environments in 2026. Built from scratch
-using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for
-LLM Applications as the reference framework.
+A 4-day hands-on SOC detection lab simulating AI-era threats that are actively emerging in enterprise environments in 2026. Built from scratch using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for LLM Applications as the reference framework.
 
-This project demonstrates the full SOC analyst workflow threat simulation,
-log ingestion, SIEM detection rule writing, threat modelling, multi-incident
-correlation, MITRE ATT&CK mapping, and professional incident report
-documentation applied to a threat class most entry-level analysts have
-never touched.
+This project demonstrates the full SOC analyst workflow, covering threat simulation, log ingestion, SIEM detection rule writing, threat modelling, multi-incident correlation, MITRE ATT&CK mapping, and professional incident report documentation, applied to a threat class most entry-level analysts have never touched.
 
 ---
 
