@@ -22,7 +22,7 @@
 
 ## Project Overview
 
-A 4-day hands-on SOC detection lab simulating AI-era threats that are actively emerging in enterprise environments in 2026. Built from scratch using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for LLM Applications as the reference framework.
+SOC detection lab simulating AI-era threats that are actively emerging in enterprise environments in 2026. Built from scratch using Splunk, Python, STRIDE threat modelling, and the OWASP Top 10 for LLM Applications as the reference framework.
 
 This project demonstrates the full SOC analyst workflow, covering threat simulation, log ingestion, SIEM detection rule writing, threat modelling, multi-incident correlation, MITRE ATT&CK mapping, and professional incident report documentation, applied to a threat class most entry-level analysts have never touched.
 
