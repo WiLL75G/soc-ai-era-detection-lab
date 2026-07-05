@@ -43,7 +43,6 @@ This lab is built to change that starting with detection.
 
 ---
 
-```
 ## Lab Structure
 | Day | Focus | Threat Simulated | Tools | Status |
 |-----|-------|-----------------|-------|--------|
@@ -51,7 +50,7 @@ This lab is built to change that starting with detection.
 | [Day 2](https://github.com/WiLL75G/soc-ai-era-detection-lab/tree/main/day2-prompt-injection) | Prompt Injection Detection | Attacker injecting override instructions into enterprise AI assistant | Python, Splunk SPL | Complete |
 | [Day 3](https://github.com/WiLL75G/soc-ai-era-detection-lab/tree/main/day3-mcp-threat-model) | MCP Threat Modelling | AI coding agent connected to GitHub, Jira, Slack and secrets manager | STRIDE, draw.io | Complete |
 | [Day 4](https://github.com/WiLL75G/soc-ai-era-detection-lab/tree/main/day4-incident-report) | Full SOC Incident Report | Combined AI-era attack chain correlating NHI abuse, prompt injection, and MCP exploitation into one kill chain | Markdown | Complete |
-```
+
 
 ---
 
