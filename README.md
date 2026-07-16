@@ -167,7 +167,6 @@ Primary risks covered:
 
 ## About the Author
 
-William Gokah is a SOC analyst building toward Tier 1 and
+William is a SOC analyst building toward Tier 1 and
 Tier 2 remote roles at MSSPs across the UK, UAE, and Australia. This
-project is part of a broader portfolio of hands-on blue team labs built
-publicly under the @WilliamInCyber brand.
+project is part of a broader portfolio of hands-on blue team labs
