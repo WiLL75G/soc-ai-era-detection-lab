@@ -1,4 +1,4 @@
-# Prompt Injection Indicators — SOC Detection Reference
+# Prompt Injection Indicators SOC Detection Reference
 
 Six signals that surface a prompt injection attempt in application logs. Five are linguistic, the sixth is behavioural, and the split is the point: keyword filters catch the payloads an attacker writes, behaviour monitoring catches the ones they phrase in a way you did not anticipate. A detection built on only one half has a blind spot the other half covers.
 
