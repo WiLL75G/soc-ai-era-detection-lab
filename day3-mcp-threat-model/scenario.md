@@ -8,10 +8,10 @@ An enterprise AI coding assistant connected via the Model Context Protocol (MCP)
 
 ## Connected Systems (MCP Servers)
 
-1. **GitHub** — source code repository access (read/write)
-2. **Jira** — ticket management and issue tracking (read/write)
-3. **Slack** — team communication (read/write)
-4. **Secrets Manager** — internal credential storage (read access)
+1. **GitHub** source code repository access (read/write)
+2. **Jira** ticket management and issue tracking (read/write)
+3. **Slack** team communication (read/write)
+4. **Secrets Manager** internal credential storage (read access)
 
 The access levels matter to the analysis. Three systems are read/write; the secrets manager is read-only, a deliberate least-privilege choice. Read-only is not safe, though, reading a credential is all an attacker needs to exfiltrate it. The scope reduction limits what can be *changed*, not what can be *stolen*.
 
